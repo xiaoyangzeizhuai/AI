@@ -1,0 +1,131 @@
+.tr {
+  display: flex;
+  width: 100%;
+  padding: 0 4%;
+}
+
+.tr.bg-gray {
+  background: #f8f8f8;
+}
+.tr-border {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.th {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.th.w1, .td.w1 {
+  width: 120%;
+  align-items: left;
+}
+.btn-edit {
+  color: #188bfe;
+}
+.td {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 130rpx;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 30rpx;
+  color: #666;
+}
+.stock-name {
+  display: block;
+  white-space: nowrap;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.stock-code {
+  display: block;
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+.price.red {
+  color: #ff4c4c;
+}
+.price.green {
+  color: #21ac59;
+}
+.profit text {
+  width: 160rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background: #a6a6a6;
+  border-radius: 6rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+.profit.red text {
+  background: #ff4c4c;
+}
+.profit.green text {
+  background: #21ac59;
+}
+.btn-zg {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+}
+.btn-zg image {
+  width: 100%;
+  height: 100%;
+}
+.btn-add {
+  position: fixed;
+  bottom: 80rpx;
+  right: 0;
+  width: 100rpx;
+  height: 100rpx;
+}
+image {
+  width: 100%;
+  height: 100%;
+}
+.btn-delete {
+  position: relative;
+  float: left;
+  width: 34rpx;
+  height: 34rpx;
+}
+
+.btn-delete image {
+  margin-top: 48rpx;
+}
+.btn-delete + .text {
+  margin-left: 60rpx;
+}
+.null {
+  position: absolute;
+  top: 80rpx;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: #f4f4f4;
+}
+.null text {
+  margin-top: -50%;
+  font-size: 30rpx;
+  color: #999;
+}
+.null navigator {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #188bfe;
+}

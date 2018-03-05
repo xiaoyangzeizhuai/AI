@@ -1,0 +1,124 @@
+<!--pages/hot-subject/intro.wxml-->
+<!-- Begin:顶部区域 -->
+<view class='box1' bindscroll="scroll">
+    <view class='topnum'>
+        <text class='fz red-txt'>+10.52%</text>
+        <text class='ranking red-bg'>TOP1</text>
+    </view>
+    <view class='box1-txt'>
+        <view class='up-stock'>
+            <text class='red-txt'>123</text>
+            <text>上涨个股数</text>
+        </view>
+        <view class='down-stock'>
+            <text class='green-txt'>1111</text>
+            <text>下跌个股数</text>
+        </view>
+        <view class='yxl'>
+            <text class='black-txt'>1452614256</text>
+            <text>影响力</text>
+        </view>
+    </view>
+</view>
+<!-- End:顶部区域 -->
+<view class='box2'>
+    <text class='box2-txt'>银行，乐意购买银行理财产品，银行理财一度成为低风险投资的代名词。但是购买银行理财产品的时候，也必须讲究一点技巧，毕竟理财的目的就是为了增值保值。今天我给大家细说一下，购买银行理财需要注意什么？</text>
+    <view class='box2-txt-from'>本文由云掌财经智能压缩，查看原文请
+        <navigator class='box2-url' url='' open-type=''>点击此处></navigator>
+    </view>
+</view>
+<!-- Begin:影响力趋势 -->
+<view class='box3'>
+    <view class='com-h'>影响力趋势</view>
+    <canvas canvas-id="columnCanvas" class="canvas"></canvas>
+</view>
+<!-- End:影响力趋势 -->
+<!-- Begin:相关个股 -->
+<view class='box4'>
+    <view class='com-h'>相关个股</view>
+    <view class='table'>
+        <view class='th'>
+            <view>名称/代码</view>
+            <view>
+                <text>最新价\n涨跌幅</text>
+            </view>
+            <view>相关度</view>
+            <view>关联原因</view>
+            <view>诊股</view>
+        </view>
+        <view class='td'>
+            <view class='td-child'>
+                <navigator url='' open-type=''>
+                    <text class='td-stock-name'>国际娱乐</text>
+                    <text class='td-stock-code'>(600612)</text>
+                </navigator>
+            </view>
+            <view class='td-child'>
+                <text class='td-stock-price'>42.15</text>
+                <text class='td-stock-range red-txt'>+0.81%</text>
+            </view>
+            <view class='relative td-child'>75%</view>
+            <view class='td-child' bindtap="showDetail" data-show='1'>
+                <text class='reason'>原因</text>
+            </view>
+            <view class='td-child'>
+                <navigator url='' open-type=''>
+                    <image class='zhen-img' src='../../../images/icon-zhengu.png'></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="reason-txt" hidden="{{showDate == 1 ? false:true}}">
+            <text>阿里巴巴旗下视频公司与NBCUniversal和Sony Pictures签署协议</text>
+        </view>
+        <view class='td'>
+            <view class='td-child'>
+                <navigator url='' open-type=''>
+                    <text class='td-stock-name'>国际娱乐</text>
+                    <text class='td-stock-code'>(600612)</text>
+                </navigator>
+            </view>
+            <view class='td-child'>
+                <text class='td-stock-price'>42.15</text>
+                <text class='td-stock-range red-txt'>+0.81%</text>
+            </view>
+            <view class='relative td-child'>75%</view>
+            <view class='td-child' bindtap="showDetail" data-show='2'>
+                <text class='reason'>原因</text>
+            </view>
+            <view class='td-child'>
+                <navigator url='' open-type=''>
+                    <image class='zhen-img' src='../../../images/icon-zhengu.png'></image>
+                </navigator>
+            </view>
+        </view>
+        <view class="reason-txt" hidden="{{showDate == 2 ? false:true}}">
+            <text>阿里巴巴旗下视频公司与NBCUniversal和Sony Pictures签署协议</text>
+        </view>
+    </view>
+</view>
+<!-- End:相关个股 -->
+<!-- Begin:相关资讯 -->
+<view class='box5'>
+    <view class='com-h'>相关资讯</view>
+    <view class='relative-news'>
+        <navigator class='relative-info'>
+            <view class='relative-info-txt' url='' open-type=''>
+                这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+            </view>
+            <view class='relative-info-from'>云掌财经 2018-10-17</view>
+        </navigator>
+        <navigator class='relative-info'>
+            <view class='relative-info-txt' url='' open-type=''>
+                这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+            </view>
+            <view class='relative-info-from'>云掌财经 2018-10-17</view>
+        </navigator>
+        <navigator class='relative-info'>
+            <view class='relative-info-txt' url='' open-type=''>
+                这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+            </view>
+            <view class='relative-info-from'>云掌财经 2018-10-17</view>
+        </navigator>
+    </view>
+    <!-- End:相关资讯 -->
+</view>

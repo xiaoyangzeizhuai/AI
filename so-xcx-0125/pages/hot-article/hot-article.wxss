@@ -1,0 +1,8 @@
+/* pages/hot-article/hot-article.wxss */
+
+.sen-state{
+    padding-left: 40rpx;  
+}
+.hot-ticai-tp{
+    margin: 0 0 15rpx 0;
+}

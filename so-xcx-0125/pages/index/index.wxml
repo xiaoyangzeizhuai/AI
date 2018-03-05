@@ -1,0 +1,267 @@
+<view>
+    <!-- Begin:搜索 -->
+    <view class='search'>
+        <form>
+            <input class="{{isChecked?'search-text-active':'search-text'}}" type='text' placeholder="输入股票代码/名称，AI为您智能诊断" placeholder-class='placeholder' bindfocus='showSearch' bindblur='hiddenSearch'></input>
+            <icon class='search-icon' type='search' size='16'></icon>
+            <view class="search-hidden {{open?'display-show':'display-none'}}">
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+            </view>
+        </form>
+    </view>
+    <!-- End:搜索 -->
+    <!-- Begin:轮播 -->
+    <view class='swiper-view'>
+        <swiper indicator-color="rgba(255, 255, 255, .5)" indicator-active-color="white" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item>
+                    <view class='swiper-mask'></view>
+                    <image src="{{item}}" class="slide-image" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- End:轮播 -->
+    <!-- Begin:牛股 -->
+    <view class='view-box1'>
+        <navigator class='view-box1-left' url='#' open-type=''>
+            <image src="../../images/niugu.png"></image>
+            <text>今日牛股</text>
+        </navigator>
+        <view class='line'></view>
+        <navigator class='view-box1-right' url='#' open-type=''>
+            <image src="../../images/shentou.png"></image>
+            <text>今日慎投</text>
+        </navigator>
+    </view>
+    <!-- End：牛股 -->
+    <!-- Begin:自选实时消息 -->
+    <view class='view-box2'>
+        <view class='view-box2-tit'>
+            <text>自选实时消息</text>
+            <navigator url='#' open-type=''>查看更多</navigator>
+        </view>
+        <view class='view-box2-con'>
+            <navigator url='#' open-type=''>
+                <view class='navi-txt'>
+                    <text class='name red-txt'>海马汽车</text>由各种物质组成的巨型球状天体，叫做星球有一定的形状
+                    <text class='iden-1'>消息</text>
+                </view>
+                <view class='navi-from'>
+                    同花顺 · 今天14:15
+                </view>
+            </navigator>
+            <navigator url='#' open-type=''>
+                <view class='navi-txt'>
+                    <text class='name green-txt'>海马汽车</text>由各种物质组成的巨型球状天体，叫做星球有一定的形状，有自己的运行轨道。
+                    <text class='iden-2'>讯</text>
+                </view>
+                <view class='navi-from'>
+                    同花顺 · 今天14:15
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <!-- End:自选实时消息 -->
+    <!-- Begin:热门题材 -->
+    <view class='view-box3'>
+        <view class='view-box2-tit'>
+            <text>大数据 · 热门题材</text>
+            <navigator url='#' open-type=''>查看更多</navigator>
+        </view>
+        <view class='view-box3-con'>
+            <navigator class='box3-con' url='#' open-type=''>
+                <view class='hot-ticai-tp'>
+                    <view class='hot-ticai-lt'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numone.png"></image>
+                            <text>1</text>
+                        </view>
+                        <view class='hot-name'>
+                            <text class='hot-name-txt'>题材涨跌</text>
+                            <text class='hot-name-price red-txt'>+10.82%</text>
+                        </view>
+                    </view>
+                    <view class='hot-ticai-rt'>
+                        <text class='txt1'>银行</text>
+                        <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                        <text>影响力：1409250</text>
+                    </view>
+                </view>
+                <view class='hot-ticai-bot'>
+                    <view class='bot'>深圳华强
+                        <text class='red-txt'>+10.25%</text>
+                        <image src='../../images/up-icon.png'></image>
+                    </view>
+                    <view class='bot-line'></view>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                </view>
+            </navigator>
+            <navigator class='box3-con' url='#' open-type=''>
+                <view class='hot-ticai-tp'>
+                    <view class='hot-ticai-lt'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numtwo.png"></image>
+                            <text>2</text>
+                        </view>
+                        <view class='hot-name'>
+                            <text class='hot-name-txt'>题材涨跌</text>
+                            <text class='hot-name-price green-txt'>-10.82%</text>
+                        </view>
+                    </view>
+                    <view class='hot-ticai-rt'>
+                        <text class='txt1'>银行</text>
+                        <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                        <text>影响力：1409250</text>
+                    </view>
+                </view>
+                <view class='hot-ticai-bot'>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                    <view class='bot-line'></view>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                </view>
+            </navigator>
+            <navigator class='box3-con' url='#' open-type=''>
+                <view class='hot-ticai-tp'>
+                    <view class='hot-ticai-lt'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numthree.png"></image>
+                            <text>3</text>
+                        </view>
+                        <view class='hot-name'>
+                            <text class='hot-name-txt'>题材涨跌</text>
+                            <text class='hot-name-price gray-txt'>0.00%</text>
+                        </view>
+                    </view>
+                    <view class='hot-ticai-rt'>
+                        <text class='txt1'>银行</text>
+                        <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                        <text>影响力：1409250</text>
+                    </view>
+                </view>
+                <view class='hot-ticai-bot'>
+                    <view class='bot'>深圳华强
+                        <text class='gray-txt'>0.00%</text>
+                        <image src='../../images/up-icon.png'></image>
+                    </view>
+                    <view class='bot-line'></view>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <!-- End:热门题材 -->
+    <!-- Begin:热门消息 -->
+    <view class='view-box3'>
+        <view class='view-box2-tit'>
+            <text>大数据 · 热门消息</text>
+            <navigator url='#' open-type=''>查看更多</navigator>
+        </view>
+        <view class='view-box3-con view-box4-con'>
+            <navigator class='box3-con' url='#' open-type=''>
+                <view class='hot-ticai-tp'>
+                    <view class='hot-icon'>
+                        <image src="../../images/numone.png"></image>
+                        <text>1</text>
+                    </view>
+                    <view class='hot-news-con'>
+                        <text class='hot-news-tit'>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                        <text class='hot-news-p'>煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                    </view>
+                </view>
+                <view class='sen-state'>
+                    <text class='red-bg'>利好</text>
+                    <text class='gray-bg'>银行</text>
+                </view>
+                <view class='hot-ticai-bot'>
+                    <view class='bot'>深圳华强
+                        <text class='red-txt'>+10.25%</text>
+                        <image src='../../images/up-icon.png'></image>
+                    </view>
+                    <view class='bot-line'></view>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                </view>
+            </navigator>
+            <navigator class='box3-con' url='#' open-type=''>
+                <view class='hot-ticai-tp'>
+                    <view class='hot-icon'>
+                        <image src="../../images/numtwo.png"></image>
+                        <text>2</text>
+                    </view>
+                    <view class='hot-news-con'>
+                        <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                    </view>
+                </view>
+                <view class='sen-state'>
+                    <text class='red-bg'>利好</text>
+                    <text class='gray-bg'>银行</text>
+                </view>
+                <view class='hot-ticai-bot'>
+                    <view class='bot'>深圳华强
+                        <text class='red-txt'>+10.25%</text>
+                        <image src='../../images/up-icon.png'></image>
+                    </view>
+                    <view class='bot-line'></view>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                </view>
+            </navigator>
+            <navigator class='box3-con' url='#' open-type=''>
+                <view class='hot-ticai-tp'>
+                    <view class='hot-icon'>
+                        <image src="../../images/numthree.png"></image>
+                        <text>3</text>
+                    </view>
+                    <view class='hot-news-con'>
+                        <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                    </view>
+                </view>
+                <view class='sen-state'>
+                    <text class='red-bg'>利好</text>
+                    <text class='gray-bg'>银行</text>
+                </view>
+                <view class='hot-ticai-bot'>
+                    <view class='bot'>深圳华强
+                        <text class='red-txt'>+10.25%</text>
+                        <image src='../../images/up-icon.png'></image>
+                    </view>
+                    <view class='bot-line'></view>
+                    <view class='bot'>深圳华强
+                        <text class='green-txt'>-10.25%</text>
+                        <image src='../../images/down-icon.png'></image>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+    <!-- End:热门消息 -->
+    <view class="no-more">
+        您已触碰到我的底线了！
+    </view>
+</view>

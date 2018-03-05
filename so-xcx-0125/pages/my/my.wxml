@@ -1,0 +1,30 @@
+<!--pages/my/my.wxml-->
+<view class='my-brief clearfix'>
+  <image class='my-pic' src='../../images/my-pic.jpg'></image>
+  <text class='my-name'>股神巴菲特</text>
+</view>
+<view class='my-relevant'>
+  <navigator url="" class='my-relevant-list'>
+    <view class='list-con'>
+      <image class='my-stock' src='../../images/my-icon1.png'></image>
+      <text class='img-txt'>我的自选股</text>
+      <image class='my-icon' src='../../images/my-icon4.png'></image>
+    </view>
+  </navigator>
+  <navigator url="" class='my-relevant-list'>
+    <view class='list-con'>
+      <image class='my-time' src='../../images/my-icon2.png'></image>
+      <text class='img-txt'>服务到期时间</text>
+      <view class='open-service'>开启服务
+        <image class='my-icon' src='../../images/my-icon4.png'></image>
+      </view>
+    </view>
+  </navigator>
+  <navigator url="" class='my-relevant-list'>
+    <view class='list-con'>
+      <image class='my-view' src='../../images/my-icon3.png'></image>
+      <text class='img-txt'>意见反馈</text>
+      <image class='my-icon' src='../../images/my-icon4.png'></image>
+    </view>
+  </navigator>
+</view>

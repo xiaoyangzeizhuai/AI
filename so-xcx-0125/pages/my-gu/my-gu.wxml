@@ -1,0 +1,42 @@
+<!--pages/my-gu/my-gu.wxml-->
+<view class="table">
+  <view class="tr bg-gray">
+    <view class="th w1 btn-edit" bindtap='changeEdit'>
+      <text wx:if="{{!isEdit}}">编辑</text>
+      <text wx:if="{{isEdit}}">取消</text>
+    </view>
+    <view class="th">当前价</view>
+    <view class="th">涨跌幅</view>
+    <view class="th" wx:if="{{!isEdit}}">诊股</view>
+  </view>
+  <view class='null' wx:if="{{niuguData.length == 0}}">
+    <text>您还未添加自选股！</text>
+    <navigator url='add/add'>添加自选股 〉</navigator>
+  </view>
+  <block wx:for="{{niuguData}}" wx:key="this" wx:for-item="item">
+    <view class="tr">
+      <view class="td w1">
+        <view class="btn-delete" wx:if="{{isEdit}}" bindtap='deleteStock' data-index="{{index}}">
+          <image src='../../images/icon-delete.png'></image>
+        </view>
+        <view class='text'>
+          <text class='stock-name'>{{item.name}}</text>
+          <text class='stock-code'>({{item.code}})</text>
+        </view>
+      </view>
+      <!-- 当前价颜色标识{{item.priceType}} -->
+      <view class="td price">{{item.priceNow}}</view>
+      <view class="td profit {{item.profitType}}">
+        <text>{{item.profit}}</text>
+      </view>
+      <view class="td" wx:if="{{!isEdit}}">
+        <navigator class='btn-zg' url='../zhengu/zhengu'>
+          <image src='../../images/icon-zhengu.png'></image>
+        </navigator>
+      </view>
+    </view>
+  </block>
+</view>
+<navigator url='add/add' class='btn-add' wx:if="{{!isEdit && (niuguData.length > 0)}}">
+  <image src='../../images/icon-addstock.png'></image>
+</navigator>

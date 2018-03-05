@@ -1,0 +1,42 @@
+/* pages/zhengu/zhengu.wxss */
+@import "../zhengu";
+.k-line-data{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32rpx 30rpx 10rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+.k-line-data view{
+    width: 33%;
+    margin-bottom: 20rpx;
+}
+.black-txt{
+    color: #666;
+}
+
+.kline-average{
+    font-size: 24rpx;
+    text-align: right;
+}
+.kline-average text{
+    margin-right: 40rpx;
+}
+.ma5 {
+    color: #6a6969;
+}
+
+.ma10 {
+    color: #f69a43;
+}
+
+.ma20 {
+    color: #edb2eb;
+}
+.stage,.stage-b{
+    width: 100%; 
+    height: 160px;
+}
+.stage-b{
+    height: 80px;
+}

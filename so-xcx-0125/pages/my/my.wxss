@@ -1,0 +1,89 @@
+/* pages/my/my.wxss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+page {
+  width: 100%;
+  background: #f4f4f4;
+}
+.my-brief {
+  width: 100%;
+  height: 190rpx;
+  padding: 0 4%;
+  background: #fff;
+}
+.my-brief .my-pic {
+  float: left;
+  width: 120rpx;
+  height: 120rpx;
+  margin: 35rpx 25rpx 0 0;
+  border-radius: 50%;
+}
+.my-brief .my-name {
+  float: left;
+  margin-top: 75rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+
+.my-relevant {
+  width: 100%; 
+  height: auto;
+  margin-top: 20rpx;
+  background: #fff;
+}
+.my-relevant-list {
+  width: 100%;
+  height: 118rpx;
+  line-height: 118rpx;
+  
+}
+.my-relevant-list .list-con {
+  width: 92%;
+  margin: 0 4%;
+  border-top: 1px solid #efefef;
+}
+.my-relevant-list:first-child {
+  border-top: 0;
+}
+.my-relevant-list .my-stock {
+  float: left;
+  width: 39rpx;
+  height: 39rpx;
+  margin: 41rpx 24rpx 0 0;
+}
+.my-relevant-list .my-time {
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin: 41rpx 21rpx 0 0;
+}
+.my-relevant-list .my-view {
+  float: left;
+  width: 35rpx;
+  height: 39rpx;
+  margin: 40rpx 28rpx 0 0;
+}
+.my-relevant-list .my-icon {
+  float: right;
+  width: 16rpx;
+  height: 25rpx;
+  margin-top: 49rpx;
+}
+.my-relevant-list .img-txt {
+  float: left;
+  font-size: 32rpx;
+  color: #333;
+}
+.my-relevant-list .open-service {
+  float: right;
+  font-size: 26rpx;
+  color: #999;
+}
+.my-relevant-list .open-service .my-icon {
+  margin-left: 20rpx;
+}

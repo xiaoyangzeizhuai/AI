@@ -1,0 +1,6 @@
+@import "../../hot-subject/intro/intro";
+.hot-news-con{
+    margin: 36rpx 0 0;
+    font-size: 38rpx;
+    line-height: 1.6;
+}

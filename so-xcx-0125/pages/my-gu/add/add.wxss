@@ -1,0 +1,84 @@
+/* 搜索框 */
+
+.search-bar {
+    position: relative;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    background: #f8f8f8;
+    padding: 16rpx 0;
+}
+
+.search-bar image {
+    position: absolute;
+    top: 50%;
+    margin-top: -12.5rpx;
+    left: 40rpx;
+    display: block;
+    width: 25rpx;
+    height: 25rpx;
+    z-index: 1;
+}
+
+.search-bar input {
+    width: 100%;
+    margin: 0 24rpx;
+    padding-left: 56rpx;
+    height: 60rpx;
+    background: #fff;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    color: #333;
+}
+
+.search-bar .search-bar-back {
+    width: 110rpx;
+    font-size: 32rpx;
+    color: #188bfe;
+}
+
+.label-text {
+    color: #aaa;
+}
+
+/* 股票筛选列表 */
+
+.result {
+    display: flex;
+    align-items: center;
+    margin: 0 24rpx;
+    padding: 30rpx 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.stock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.stock-name {
+    font-size: 30rpx;
+    color: #000;
+}
+
+.stock-code {
+    margin-top: 10rpx;
+    font-size: 22rpx;
+    color: #999;
+}
+
+.add-wrap {
+    width: 100%;
+    text-align: right;
+}
+
+.add-wrap image {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.add-wrap text {
+    font-size: 28rpx;
+    color: #ccc;
+}

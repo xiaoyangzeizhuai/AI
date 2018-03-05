@@ -1,0 +1,144 @@
+<!--pages/zhengu/zhengu.wxml-->
+<view>
+    <view class='default-zhengu' wx:if="{{isHidden}}" style='height:{{winHeight}}px;'>
+        <image src='../../images/default-zhengu.png'></image>
+        <text>暂无搜索结果</text>
+    </view>
+    <view wx:else>
+        <view class="view-tab">
+            <view class="{{selected?'on':''}}" bindtap="selected">
+                <text>智能诊股</text>
+            </view>
+            <view class="{{selected1?'on':''}}" bindtap="selected1">
+                <text>实时行情</text>
+            </view>
+        </view>
+        <view class="{{selected?'show':'hidden'}}">
+            <!-- Begin:搜索 -->
+            <view class='search'>
+                <form>
+                    <input class="{{isChecked?'search-text-active':'search-text'}}" type='text' placeholder="输入股票代码/名称，AI为您智能诊断" placeholder-class='placeholder' bindfocus='showSearch' bindblur='hiddenSearch'></input>
+                    <icon class='search-icon' type='search' size='16'></icon>
+                    <view class="search-hidden {{open?'display-show':'display-none'}}">
+                        <view>科大讯飞（
+                            <text class='red-txt'>00</text>0000）</view>
+                        <view>科大讯飞（
+                            <text class='red-txt'>00</text>0000）</view>
+                        <view>科大讯飞（
+                            <text class='red-txt'>00</text>0000）</view>
+                        <view>科大讯飞（
+                            <text class='red-txt'>00</text>0000）</view>
+                        <view>科大讯飞（
+                            <text class='red-txt'>00</text>0000）</view>
+                    </view>
+                </form>
+            </view>
+            <!-- End:搜索 -->
+            <!-- Begin:股票信息 -->
+            <view class='stock-info'>
+                <view class='stock-info-tp'>
+                    <view class='area1 green-bg'>看空</view>
+                    <view class='area2'>
+                        <view class='area2-name'>上峰水泥
+                            <text>(000000)</text>
+                        </view>
+                        <view class='area2-force'>影响力：111222</view>
+                    </view>
+                    <view class='area3'>
+                        <view class='area3-price red-txt'>746.73</view>
+                        <view class='area3-range red-txt'>+14.36
+                            <text>|</text>+0.18%</view>
+                    </view>
+                </view>
+                <view class='stock-info-bt'>
+                    <view class='stock-info-bt-txt'>
+                        <navigator url=''>
+                            <text>驱动事件：</text>这是驱动事件标题，限制展示两行这是驱动事件标题，限制展示两行...
+                        </navigator>
+                    </view>
+                    <view class='addselect'>+自选</view>
+                </view>
+            </view>
+            <!-- End:股票信息 -->
+            <!-- Begin:所属概念板块 -->
+            <view class='zhengu-bankuai'>
+                <view class='com-h'>所属概念板块</view>
+                <view class='zhengu-list-con'>
+                    <view class='zhengu-list'>
+                        <text class='zhengu-list-name'>国债逆回购</text>
+                        <text class='zhengu-list-range red-txt'>+2.56%</text>
+                        <image src='../../images/icon-up.png'></image>
+                    </view>
+                    <view class='zhengu-list'>
+                        <text class='zhengu-list-name'>国债逆回购</text>
+                        <text class='zhengu-list-range green-txt'>-2.56%</text>
+                        <image src='../../images/icon-down.png'></image>
+                    </view>
+                    <view class='zhengu-list'>
+                        <text class='zhengu-list-name'>房地产</text>
+                        <text class='zhengu-list-range green-txt'>-2.56%</text>
+                        <image src='../../images/icon-down.png'></image>
+                    </view>
+                </view>
+            </view>
+            <!-- End:所属概念板块 -->
+
+            <!-- Begin:近期舆情走势 -->
+            <view class='zhengu-trend'>
+                <view class='com-h'>近期舆情走势</view>
+                <view class='zhengu-trend-tit'>影响力趋势
+                    <!-- <image src='../../images/icon-warning.png'></image> -->
+                </view>
+                <canvas canvas-id="columnCanvas" class="column-canvas"></canvas>
+                <view class='txt-canvas'>tip：影响力趋势用于展现个股近期市场舆情讨论度变化趋势，供投资者直观了解近期个股在市场上影响力的动态变化。</view>
+                <view class='zhengu-trend-tit'>影响力分布
+                    <!-- <image src='../../images/icon-warning.png'></image> -->
+                </view>
+                <canvas canvas-id="ringCanvas" class="ring-canvas"></canvas>
+                <view class='txt-canvas'>tip：影响力分布用于展现个股被关注的资讯篇数及占比最高的5个渠道，直观了解主流渠道对该股的关注程度。</view>
+            </view>
+            <!-- End:近期舆情走势 -->
+
+            <!-- Begin:资讯 -->
+            <view class='zhengu-info'>
+                <view class='zhengu-info-tit'>
+                    <view class='com-h'>{{datevalue}}资讯</view>
+                    <view class='change-date'>
+                        <picker class="calendar-day" mode="date" value="{{datevalue}}" start="1999-01-01" end="2999-12-31" bindchange="bindDateChange">
+                            更改日期
+                        </picker>
+                    </view>
+                </view>
+                <view class='default-zixun' wx:if="{{isHiddenn}}">
+                    <image src='../../images/default-zhengu.png'></image>
+                    <text>暂无相关资讯</text>
+                </view>
+                <view class='relative-news' wx:else>
+                    <navigator class='relative-info'>
+                        <view class='relative-info-txt' url='' open-type=''>
+                            这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+                        </view>
+                        <view class='relative-info-from'>2018-10-17</view>
+                    </navigator>
+                    <navigator class='relative-info'>
+                        <view class='relative-info-txt' url='' open-type=''>
+                            这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+                        </view>
+                        <view class='relative-info-from'>2018-10-17</view>
+                    </navigator>
+                    <navigator class='relative-info'>
+                        <view class='relative-info-txt' url='' open-type=''>
+                            这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+                        </view>
+                        <view class='relative-info-from'>2018-10-17</view>
+                    </navigator>
+                </view>
+            </view>
+            <!-- End:资讯 -->
+            <view class='zhengu-warning'>以上内容不构成投资建议，股市有风险，投资需谨慎</view>
+        </view>
+        <view class="{{selected1?'show':'hidden'}}">
+            <include src="kline/kline.wxml" />
+        </view>
+    </view>
+</view>

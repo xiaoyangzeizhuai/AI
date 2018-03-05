@@ -1,0 +1,12 @@
+<!--pages/complaint/complaint.wxml-->
+<view class="complaint">
+  <view class="complaint-content">
+    <textarea bindinput="bindTextAreaChange" placeholder="请输入您的反馈意见（300字内）" placeholder-class="complaint-gray" value="{{info}}" maxlength="{{noteMaxLen}}" focus></textarea>
+    <view class="number-limit">
+      {{noteNowLen}}/{{noteMaxLen}}
+    </view>
+  </view>
+  <view class="complaint-button">
+    <button type="submit" bindtap="bindSubmit"> 提交 </button>
+  </view>
+</view>

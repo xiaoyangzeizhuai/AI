@@ -1,0 +1,112 @@
+/* pages/pay/pay.wxss */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+page {
+    width: 92%;
+    margin: 0 auto;
+}
+
+.service-term {
+    padding-top: 40rpx;
+}
+
+.pay-title {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.service-term-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30rpx;
+}
+
+.service-term-list .pay-mode {
+    position: relative;
+    /* float: left; */
+    width: 214rpx;
+    height: 131rpx;
+    margin: 0 0 24rpx 0;
+    border: 1px solid #dcdcdc;
+    border-radius: 10rpx;
+    text-align: center;
+}
+
+.service-term-list .pay-mode .active-icon {
+    position: absolute;
+    right: -1rpx;
+    bottom: 0;
+    width: 64rpx;
+    height: 62rpx;
+}
+
+.service-term-list .pay-mode.active {
+    border: 1px solid #f00;
+}
+
+.service-term-list .pay-mode:first-child {
+    margin-left: 0;
+}
+
+.pay-mode .pay-num {
+    margin-top: 20rpx;
+    font-size: 22rpx;
+    color: #f00;
+}
+
+.pay-mode .pay-num text {
+    font-size: 32rpx;
+}
+
+.pay-mode .pay-time {
+    margin-top: 5rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+
+/*支付方式*/
+
+.pay-method {
+    margin-top: 80rpx;
+}
+
+.pay-wechat {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+    color: #333;
+}
+
+.pay-wechat .pay-wechat {
+    width: 40rpx;
+    height: 40rpx;
+    margin: 0 10rpx -8rpx 0;
+}
+
+.pay-wechat .pay-icon {
+    float: right;
+    width: 36rpx;
+    height: 36rpx;
+    margin: 0 0 -8rpx 0;
+}
+
+.pay-method button {
+    height: 88rpx;
+    line-height: 88rpx;
+    margin-top: 100rpx;
+    background: #008cee;
+    font-size: 32rpx;
+    color: #fff;
+}
+
+.pay-method button::after {
+    border: 0;
+}

@@ -1,0 +1,249 @@
+<!--pages/sevenday-article/my/my.wxml-->
+<scroll-view scroll-y style='height:100%' scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
+    <view>
+        <!-- Begin:默认无数据 -->
+        <view class='default' wx:if="{{isHidden}}">
+            <image class='default-img' src='../../../images/default-my.png'></image>
+            <text class='default-txt'>暂无消息,添加自选股定制消息</text>
+            <navigator class='default-btn' url='' open-type=''>添加自选股</navigator>
+        </view>
+        <!-- End:默认无数据 -->
+        <!-- Begin:有数据 -->
+        <view class='white-bg' wx:else>
+            <!-- Begin:选择自选股 -->
+            <view class='select-news'>
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                    {{array[index]}}
+                    <image class='arrow-down' src='../../../images/arrow-down.png'></image>
+                </picker>
+            </view>
+            <!-- End:选择自选股 -->
+            <view class='sevenday-news'>
+                <view class='day'>11月10日</view>
+                <view class='sevenday-news-con'>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <navigator class='sevenday-url' url='' open-type=''>煤炭产业链跟踪周报：各大煤企下调下水煤价有望</navigator>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class='sevenday-news'>
+                <view class='day'>11月10日</view>
+                <view class='sevenday-news-con'>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class='sevenday clearfix'>
+                        <view class='sevenday-lt'>
+                            <text>10:17</text>
+                        </view>
+                        <view class='sevenday-rt'>
+                            <view class='hot-news-con'>
+                                <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价有望</text>
+                            </view>
+                            <view class='sen-state'>
+                                <text class='red-bg'>利好</text>
+                                <text class='gray-bg'>银行</text>
+                            </view>
+                            <view class='news-info'>
+                                周一（11月13日）两市高开高走，创业板稍弱市受周末利好消息影响，银行板块全线上扬。
+                            </view>
+                            <view class='hot-ticai-bot'>
+                                <view class='bot'>深圳华强
+                                    <text class='red-txt'>+10.25%</text>
+                                    <image src='../../../images/up-icon.png'></image>
+                                </view>
+                                <view class='bot-line'></view>
+                                <view class='bot'>深圳华强
+                                    <text class='green-txt'>-10.25%</text>
+                                    <image src='../../../images/down-icon.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    
+                </view>
+            </view>
+            <!-- Beigin:加载更多 -->
+            <view class='loading-more'>
+                <text class='loading-more-txt'>加载更多</text>
+            </view>
+            <!-- End:加载更多 -->
+        </view>
+        <!-- End:有数据 -->
+    </view>
+</scroll-view>
+ <!-- Begin:返回顶部 -->
+ <view class='totop1' catchtap='goTopFun' wx:if="{{scrollTop.goTop_show}}">
+    <image src='../../images/btn-totop.png'></image>
+</view> 
+<!-- End:返回顶部  -->

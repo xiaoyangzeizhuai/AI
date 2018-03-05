@@ -1,0 +1,29 @@
+/* pages/pay/success/success.wxss */
+.pay-success {
+  margin-top: 265rpx;
+}
+.pay-success icon, .pay-success text {
+  display: block; 
+  text-align: center;
+}
+.pay-success .use-thanks {
+  margin-top: 45rpx;
+  font-size: 36rpx;
+  color: #333;
+}
+.pay-success .use-time {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  color: #888;
+}
+.backindex{
+    width: 260rpx;
+    height: 70rpx;
+    margin: 100rpx auto 0;
+    border-radius: 10rpx;
+    line-height: 70rpx;
+    background: #f4f4f4;
+    font-size: 28rpx;
+    color: #999;
+    text-align: center;
+}

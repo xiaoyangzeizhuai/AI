@@ -1,0 +1,183 @@
+<!--pages/hot-subject/hot-subject.wxml-->
+<view>
+    <view class="view-tab">
+        <view class="{{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+            <text>热门题材</text>
+        </view>
+        <view class="{{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+            <text>热门消息</text>
+        </view>
+    </view>
+
+    <swiper style=' height:{{winHeight - 40}}px' current='{{currentTab}}' bindchange="bindChange">
+        <swiper-item>
+            <view class='hot-default' wx:if="{{isHidden}}">加载中...</view>
+            <scroll-view scroll-y style='height:100%' wx:else>
+                <!-- Begin:日期选择 -->
+                <view class='day'>
+                    <view class='calendar'>
+                        <image class='calendar-icon' src='../../images/calendar-icon.png'></image>
+                        <text> 2018-1-25 星期四</text>
+                    </view>
+                    <text class='day-txt'>实时数据来自云掌财经可搜</text>
+                </view>
+                <!-- End:日期选择 -->
+                <view class='view-box3-con'>
+                    <navigator class='box3-con' url='#' open-type=''>
+                        <view class='hot-ticai-tp'>
+                            <view class='hot-ticai-lt'>
+                                <view class='hot-icon'>
+                                    <image src="../../images/numone.png"></image>
+                                    <text>1</text>
+                                </view>
+                                <view class='hot-name'>
+                                    <text class='hot-name-txt'>题材涨跌</text>
+                                    <text class='hot-name-price red-txt'>+10.82%</text>
+                                </view>
+                            </view>
+                            <view class='hot-ticai-rt'>
+                                <text class='txt1'>银行</text>
+                                <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                                <text>影响力：1409250</text>
+                            </view>
+                        </view>
+                        <view class='hot-ticai-bot'>
+                            <view class='bot'>深圳华强
+                                <text class='red-txt'>+10.25%</text>
+                                <image src='../../images/up-icon.png'></image>
+                            </view>
+                            <view class='bot-line'></view>
+                            <view class='bot'>深圳华强
+                                <text class='green-txt'>-10.25%</text>
+                                <image src='../../images/down-icon.png'></image>
+                            </view>
+                        </view>
+                    </navigator>
+                    <navigator class='box3-con' url='#' open-type=''>
+                        <view class='hot-ticai-tp'>
+                            <view class='hot-ticai-lt'>
+                                <view class='hot-icon'>
+                                    <image src="../../images/numtwo.png"></image>
+                                    <text>2</text>
+                                </view>
+                                <view class='hot-name'>
+                                    <text class='hot-name-txt'>题材涨跌</text>
+                                    <text class='hot-name-price green-txt'>-10.82%</text>
+                                </view>
+                            </view>
+                            <view class='hot-ticai-rt'>
+                                <text class='txt1'>银行</text>
+                                <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                                <text>影响力：1409250</text>
+                            </view>
+                        </view>
+                        <view class='hot-ticai-bot'>
+                            <view class='bot'>深圳华强
+                                <text class='green-txt'>-10.25%</text>
+                                <image src='../../images/down-icon.png'></image>
+                            </view>
+                            <view class='bot-line'></view>
+                            <view class='bot'>深圳华强
+                                <text class='green-txt'>-10.25%</text>
+                                <image src='../../images/down-icon.png'></image>
+                            </view>
+                        </view>
+                    </navigator>
+                    <navigator class='box3-con' url='#' open-type=''>
+                        <view class='hot-ticai-tp'>
+                            <view class='hot-ticai-lt'>
+                                <view class='hot-icon'>
+                                    <image src="../../images/numthree.png"></image>
+                                    <text>3</text>
+                                </view>
+                                <view class='hot-name'>
+                                    <text class='hot-name-txt'>题材涨跌</text>
+                                    <text class='hot-name-price gray-txt'>0.00%</text>
+                                </view>
+                            </view>
+                            <view class='hot-ticai-rt'>
+                                <text class='txt1'>银行</text>
+                                <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                                <text>影响力：1409250</text>
+                            </view>
+                        </view>
+                        <view class='hot-ticai-bot'>
+                            <view class='bot'>深圳华强
+                                <text class='gray-txt'>0.00%</text>
+                                <image src='../../images/up-icon.png'></image>
+                            </view>
+                            <view class='bot-line'></view>
+                            <view class='bot'>深圳华强
+                                <text class='green-txt'>-10.25%</text>
+                                <image src='../../images/down-icon.png'></image>
+                            </view>
+                        </view>
+                    </navigator>
+                    <navigator class='box3-con' url='#' open-type=''>
+                        <view class='hot-ticai-tp'>
+                            <view class='hot-ticai-lt'>
+                                <view class='hot-icon'>
+                                    <image src="../../images/numfour.png"></image>
+                                    <text>4</text>
+                                </view>
+                                <view class='hot-name'>
+                                    <text class='hot-name-txt'>题材涨跌</text>
+                                    <text class='hot-name-price gray-txt'>0.00%</text>
+                                </view>
+                            </view>
+                            <view class='hot-ticai-rt'>
+                                <text class='txt1'>银行</text>
+                                <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                                <text>影响力：1409250</text>
+                            </view>
+                        </view>
+                        <view class='hot-ticai-bot'>
+                            <view class='bot'>深圳华强
+                                <text class='red-txt'>10.00%</text>
+                                <image src='../../images/up-icon.png'></image>
+                            </view>
+                            <view class='bot-line'></view>
+                            <view class='bot'>深圳华强
+                                <text class='green-txt'>-10.25%</text>
+                                <image src='../../images/down-icon.png'></image>
+                            </view>
+                        </view>
+                    </navigator>
+                    <navigator class='box3-con' url='#' open-type=''>
+                        <view class='hot-ticai-tp'>
+                            <view class='hot-ticai-lt'>
+                                <view class='hot-icon'>
+                                    <image src="../../images/numfour.png"></image>
+                                    <text>5</text>
+                                </view>
+                                <view class='hot-name'>
+                                    <text class='hot-name-txt'>题材涨跌</text>
+                                    <text class='hot-name-price gray-txt'>0.00%</text>
+                                </view>
+                            </view>
+                            <view class='hot-ticai-rt'>
+                                <text class='txt1'>银行</text>
+                                <text>新高缺乏量能支撑沪强深弱或将逆转</text>
+                                <text>影响力：1409250</text>
+                            </view>
+                        </view>
+                        <view class='hot-ticai-bot'>
+                            <view class='bot'>深圳华强
+                                <text class='gray-txt'>0.00%</text>
+                                <image src='../../images/up-icon.png'></image>
+                            </view>
+                            <view class='bot-line'></view>
+                            <view class='bot'>深圳华强
+                                <text class='green-txt'>-10.25%</text>
+                                <image src='../../images/down-icon.png'></image>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </scroll-view>
+        </swiper-item>
+        <swiper-item>
+            <include src="../hot-article/hot-article.wxml" />
+        </swiper-item>
+    </swiper>
+</view>

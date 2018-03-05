@@ -1,0 +1,150 @@
+<!--pages/hot-article/hot-article.wxml-->
+ <view class='hot-default' wx:if="{{isHidden}}">加载中...</view>
+<scroll-view scroll-y style='height:100%' wx:else>
+    <view>
+        <!-- Begin:日期选择器 -->
+        <view class='day'>
+            <view class='calendar'>
+                <image class='calendar-icon' src='../../images/calendar-icon.png'></image>
+                <text> 2018-1-25 星期四</text>
+            </view>
+            <text class='day-txt'>实时数据来自云掌财经可搜</text>
+        </view>
+        <!-- End:日期选择器 -->
+        <view class='view-box3'>
+            <view class='view-box3-con view-box4-con'>
+                <navigator class='box3-con' url='#' open-type=''>
+                    <view class='hot-ticai-tp'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numone.png"></image>
+                            <text>1</text>
+                        </view>
+                        <view class='hot-news-con'>
+                            <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                        </view>
+                    </view>
+                    <view class='sen-state'>
+                        <text class='red-bg'>利好</text>
+                        <text class='gray-bg'>银行</text>
+                    </view>
+                    <view class='hot-ticai-bot'>
+                        <view class='bot'>深圳华强
+                            <text class='red-txt'>+10.25%</text>
+                            <image src='../../images/up-icon.png'></image>
+                        </view>
+                        <view class='bot-line'></view>
+                        <view class='bot'>深圳华强
+                            <text class='green-txt'>-10.25%</text>
+                            <image src='../../images/down-icon.png'></image>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class='box3-con' url='#' open-type=''>
+                    <view class='hot-ticai-tp'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numtwo.png"></image>
+                            <text>2</text>
+                        </view>
+                        <view class='hot-news-con'>
+                            <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+
+                        </view>
+                    </view>
+                    <view class='sen-state'>
+                        <text class='red-bg'>利好</text>
+                        <text class='gray-bg'>银行</text>
+                    </view>
+                    <view class='hot-ticai-bot'>
+                        <view class='bot'>深圳华强
+                            <text class='red-txt'>+10.25%</text>
+                            <image src='../../images/up-icon.png'></image>
+                        </view>
+                        <view class='bot-line'></view>
+                        <view class='bot'>深圳华强
+                            <text class='green-txt'>-10.25%</text>
+                            <image src='../../images/down-icon.png'></image>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class='box3-con' url='#' open-type=''>
+                    <view class='hot-ticai-tp'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numthree.png"></image>
+                            <text>3</text>
+                        </view>
+                        <view class='hot-news-con'>
+                            <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                        </view>
+                    </view>
+                    <view class='sen-state'>
+                        <text class='red-bg'>利好</text>
+                        <text class='gray-bg'>银行</text>
+                    </view>
+                    <view class='hot-ticai-bot'>
+                        <view class='bot'>深圳华强
+                            <text class='red-txt'>+10.25%</text>
+                            <image src='../../images/up-icon.png'></image>
+                        </view>
+                        <view class='bot-line'></view>
+                        <view class='bot'>深圳华强
+                            <text class='green-txt'>-10.25%</text>
+                            <image src='../../images/down-icon.png'></image>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class='box3-con' url='#' open-type=''>
+                    <view class='hot-ticai-tp'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numfour.png"></image>
+                            <text>4</text>
+                        </view>
+                        <view class='hot-news-con'>
+                            <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                        </view>
+                    </view>
+                    <view class='sen-state'>
+                        <text class='red-bg'>利好</text>
+                        <text class='gray-bg'>银行</text>
+                    </view>
+                    <view class='hot-ticai-bot'>
+                        <view class='bot'>深圳华强
+                            <text class='red-txt'>+10.25%</text>
+                            <image src='../../images/up-icon.png'></image>
+                        </view>
+                        <view class='bot-line'></view>
+                        <view class='bot'>深圳华强
+                            <text class='green-txt'>-10.25%</text>
+                            <image src='../../images/down-icon.png'></image>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class='box3-con' url='#' open-type=''>
+                    <view class='hot-ticai-tp'>
+                        <view class='hot-icon'>
+                            <image src="../../images/numfour.png"></image>
+                            <text>5</text>
+                        </view>
+                        <view class='hot-news-con'>
+                            <text>[推荐评级]煤炭产业链跟踪周报：各大煤企下调下水煤价 有望为市场降温</text>
+                        </view>
+                    </view>
+                    <view class='sen-state'>
+                        <text class='red-bg'>利好</text>
+                        <text class='gray-bg'>银行</text>
+                    </view>
+                    <view class='hot-ticai-bot'>
+                        <view class='bot'>深圳华强
+                            <text class='red-txt'>+10.25%</text>
+                            <image src='../../images/up-icon.png'></image>
+                        </view>
+                        <view class='bot-line'></view>
+                        <view class='bot'>深圳华强
+                            <text class='green-txt'>-10.25%</text>
+                            <image src='../../images/down-icon.png'></image>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</scroll-view>

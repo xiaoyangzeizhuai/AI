@@ -1,0 +1,70 @@
+/* pages/hot-subject/hot-subject.wxss */
+@import "../hot-article/hot-article";
+
+.view-tab {
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #f4f4f4;
+}
+
+.view-tab view {
+    width: 50%;
+    font-size: 30rpx;
+    color: #333;
+    text-align: center;
+}
+
+.view-tab view.on text {
+    padding-bottom: 20rpx;
+    color: #188bfe;
+    border-bottom: 2px solid #188bfe;
+}
+
+.view-box3-con {
+    padding: 0 20rpx;
+}
+
+.day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75rpx;
+    padding: 0 20rpx;
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 35rpx;
+}
+
+.calendar-icon {
+    width: 26rpx;
+    height: 26rpx;
+    margin-right: 16rpx;
+}
+
+.calendar {
+    font-size: 28rpx;
+    color: #999;
+}
+
+.day-txt {
+    font-size: 26rpx;
+    color: #ccc;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.hot-default {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    margin-left: -55rpx;
+    font-size: 30rpx;
+    color: #666;
+    z-index: 2;
+}

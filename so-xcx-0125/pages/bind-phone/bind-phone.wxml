@@ -1,0 +1,14 @@
+<!--pages/bind-phone/bind-phone.wxml-->
+<view class='bind-phone'>
+  <view class='phone-num clearfix'>
+    <input type='number' placeholder="输入手机号" placeholder-class = "gray" name="usePhone" bindinput='blurPhone' />
+    <button class='identify-code' disabled='{{disabled}}' hover-class="none" data-id="code" bindtap="getVerificationCode">
+{{time}}
+</button>
+  </view>
+  <view class='yzm-num'>
+    <input type='number' placeholder="输入验证码" placeholder-class = "gray" />
+  </view>
+  <button class='bind-btn' type='submit'>确定</button>
+</view>
+

@@ -1,0 +1,37 @@
+<!--pages/pay/pay.wxml-->
+<view class='service-term'>
+  <text class='pay-title'>服务期限</text>
+  <view class='service-term-list clearfix'>
+    <view data-num="1" class="pay-mode {{_num==1 ? 'active':''}}" bindtap="click">
+      <view class='pay-num'>￥<text>100</text></view>
+      <view class='pay-time'>一季度</view>
+      <image wx:if="{{_num==1}}" class='active-icon' src='../../images/pay-active.png'></image>
+    </view>
+    <view data-num="2" class="pay-mode {{_num==2 ? 'active':''}}" bindtap="click">
+      <view class='pay-num'>￥<text>500</text></view>
+      <view class='pay-time'>半年</view>
+      <image wx:if="{{_num==2}}" class='active-icon' src='../../images/pay-active.png'></image>
+    </view>
+    <view data-num="3" class="pay-mode {{_num==3 ? 'active':''}}" bindtap="click">
+      <view class='pay-num'>￥<text>1000</text></view>
+      <view class='pay-time'>一年</view>
+      <image wx:if="{{_num==3}}" class='active-icon' src='../../images/pay-active.png'></image>
+    </view>
+      <view data-num="4" class="pay-mode {{_num==4 ? 'active':''}}" bindtap="click">
+      <view class='pay-num'>￥<text>1000</text></view>
+      <view class='pay-time'>一年</view>
+      <image wx:if="{{_num==4}}" class='active-icon' src='../../images/pay-active.png'></image>
+    </view>
+
+  </view>
+</view>
+<view class='pay-method'>        
+  <text class='pay-title'>支付方式</text>
+  <view class='pay-wechat clearfix'>
+    <image class='pay-wechat' src='../../images/pay-wechat.png'></image>
+    微信支付
+    <image class='pay-icon' src='../../images/pay-icon.png'></image>
+  </view>
+  <button type="submit">确认支付</button>
+</view>
+

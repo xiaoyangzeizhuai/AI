@@ -1,0 +1,172 @@
+<!--banner-->
+<view class='banner'>
+    <image src='{{banner}}'></image>
+    <text>基于大数据挖掘技术，实时获取财经热点及重大新闻，针对热点事件进行智能提炼及情感分析，于每交易日盘前获取牛股</text>
+</view>
+<!-- 已付费用户 -->
+<view wx:if="{{isPay}}">
+    <view class='default-niugu'>
+        <image src='../../images/icon-defaultniugu.png'></image>
+        <text>今日牛股正在推荐中，请稍后。。。</text>
+    </view>
+    <view class="table">
+        <view class="tr bg-gray">
+            <view class="th w1">名称/代码</view>
+            <view class="th">当前价</view>
+            <view class="th w2">题材</view>
+            <view class="th w3">诊股</view>
+            <view class="th w3">展开</view>
+        </view>
+        <block wx:for="{{niuguData}}" wx:key="this" wx:for-item="item">
+            <view class="tr">
+                <view class="td w1">
+                    <text class='stock-name'>{{item.name}}</text>
+                    <text class='stock-code'>({{item.code}})</text>
+                </view>
+                <view class="td price {{item.priceType}}">{{item.priceNow}}</view>
+                <view class="td w2">{{item.type}}</view>
+                <view class="td w3">
+                    <navigator class='btn-zg' url='../zhengu/zhengu'>
+                        <image src='../../images/icon-zhengu.png'></image>
+                    </navigator>
+                </view>
+                <view class='td opr-open w3' bindtap='showDetail' data-index="{{index}}">
+                    <image src='{{showStock == index ? imgDown : imgUp}}'></image>
+                </view>
+            </view>
+            <view class="article" hidden="{{showStock == index ? false:true}}">
+                <text class='h6'>阿里巴巴旗下视频公司与NBCUniversal和Sony Pictures签署协议</text>
+                <text class='p'>阿里巴巴旗下的视频服务商优酷土豆与NBCUniversal和SonyPicturesTelevision签署了内容授权协议，标志着这家中国电子商务巨头进一步深入娱乐领域。优库土豆于周四发布声明称，通过这项期限数年的协议，优酷用户可以观看到这两家公司数以百计的电影。</text>
+            </view>
+        </block>
+    </view>
+    <view class='history-data'>以下是历史数据</view>
+</view>
+<!-- 未付费用户 -->
+<view wx:else>
+    <view class="table">
+        <view class="tr bg-gray">
+            <view class="th w1">名称/代码</view>
+            <view class="th">当前价</view>
+            <view class="th w2">题材</view>
+            <view class="th w3">展开</view>
+        </view>
+        <block wx:for="{{niuguData}}" wx:key="this" wx:for-item="item">
+            <view class="tr" wx:if="{{index==2}}">
+                <view class="td w1">
+                    <text class='stock-name'>*****</text>
+                    <text class='stock-code'>(600***)</text>
+                </view>
+                <view class="td price {{item.priceType}}">**7.00</view>
+                <view class="td w2">{{item.type}}</view>
+                <view class='td opr-open w3' bindtap='showDetail' data-index="{{index}}">
+                    <image src='{{showStock == index ? imgDown : imgUp}}'></image>
+                </view>
+            </view>
+            <view class="article" hidden="{{showStock == index ? false:true}}">
+                <text class='h6'>阿里巴巴旗下视频公司与NBCUniversal和Sony Pictures签署协议</text>
+                <text class='p'>阿里巴巴旗下的视频服务商优酷土豆与NBCUniversal和SonyPicturesTelevision签署了内容授权协议，标志着这家中国电子商务巨头进一步深入娱乐领域。优库土豆于周四发布声明称，通过这项期限数年的协议，优酷用户可以观看到这两家公司数以百计的电影。</text>
+            </view>
+        </block>
+    </view>
+    <!-- 查看今日数据按钮 -->
+    <navigator url='' class='btn-blue'>查看今日数据</navigator>
+</view>
+<!-- 昨日数据 -->
+<view class='old-title' data-show='1' bindtap='showDetail'>
+    <text>准确率：<text class='red'>78%</text></text>
+    <text>2018-01-23</text>
+    <view class='opr-open'>
+        <image src='{{showDate == 1 ? imgDown : imgUp}}'></image>
+    </view>
+</view>
+<view class='table' hidden="{{showDate == 1 ? false:true}}">
+    <view class="tr tr-border">
+        <view class="th w1">名称/代码</view>
+        <view class="th">发现价</view>
+        <view class="th ">最高盈利幅度</view>
+        <view class="th w3">诊股</view>
+    </view>
+    <block wx:for="{{niuguData}}" wx:key="this">
+        <view class="tr">
+            <view class="td w1">
+                <text class='stock-name'>{{item.name}}</text>
+                <text class='stock-code'>({{item.code}})</text>
+            </view>
+            <view class="td price">{{item.priceLook}}</view>
+            <view class="td">
+                <text class='tag-data red-bg'>+11.8%</text>
+            </view>
+            <view class="td w3">
+                <navigator class='btn-zg' url='../zhengu/zhengu'>
+                    <image src='../../images/icon-zhengu.png'></image>
+                </navigator>
+            </view>
+        </view>
+    </block>
+</view>
+<view class='old-title' data-show='2' bindtap='showDetail'>
+    <text>准确率：<text class='red'>53.5%</text></text>
+    <text>2018-01-24</text>
+    <view class='opr-open'>
+        <image src='{{showDate == 2 ? imgDown : imgUp}}'></image>
+    </view>
+</view>
+<view class='table' hidden="{{showDate == 2 ? false:true}}">
+    <view class="tr tr-border">
+        <view class="th w1">名称/代码</view>
+        <view class="th">发现价</view>
+        <view class="th ">最高盈利幅度</view>
+        <view class="th w3">诊股</view>
+    </view>
+    <block wx:for="{{niuguData}}" wx:key="this">
+        <view class="tr">
+            <view class="td w1">
+                <text class='stock-name'>{{item.name}}</text>
+                <text class='stock-code'>({{item.code}})</text>
+            </view>
+            <view class="td price">{{item.priceLook}}</view>
+            <view class="td">
+                <text class='tag-data red-bg'>+11.8%</text>
+            </view>
+            <view class="td w3">
+                <navigator class='btn-zg' url='../zhengu/zhengu'>
+                    <image src='../../images/icon-zhengu.png'></image>
+                </navigator>
+            </view>
+        </view>
+    </block>
+</view>
+<view class='old-title' data-show='3' bindtap='showDetail'>
+    <text>准确率：<text class='red'>30%</text></text>
+    <text>2018-01-25</text>
+    <view class='opr-open'>
+        <image src='{{showDate == 3 ? imgDown : imgUp}}'></image>
+    </view>
+</view>
+<view class='table' hidden="{{showDate == 3 ? false:true}}">
+    <view class="tr tr-border">
+        <view class="th w1">名称/代码</view>
+        <view class="th">发现价</view>
+        <view class="th ">最高盈利幅度</view>
+        <view class="th w3">诊股</view>
+    </view>
+    <block wx:for="{{niuguData}}" wx:key="this">
+        <view class="tr">
+            <view class="td w1">
+                <text class='stock-name'>{{item.name}}</text>
+                <text class='stock-code'>({{item.code}})</text>
+            </view>
+            <view class="td price">{{item.priceLook}}</view>
+            <view class="td">
+                <text class='tag-data red-bg'>+11.8%</text>
+            </view>
+            <view class="td w3">
+                <navigator class='btn-zg' url='../zhengu/zhengu'>
+                    <image src='../../images/icon-zhengu.png'></image>
+                </navigator>
+            </view>
+        </view>
+    </block>
+</view>
+<view class='footer'>以上内容不构成投资建议，股市有风险，投资需谨慎</view>

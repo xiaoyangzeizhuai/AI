@@ -1,0 +1,78 @@
+<!--pages/pay/intro/intro.wxml-->
+<view class='wrap'>
+    <image class='intro-banner' src='../../../images/pay-intro-banner.jpg'></image>
+    <!-- 本周牛股 -->
+    <view class='intro-stock'>
+        <image class='intro-stock-bg' src='../../../images/intro-stock-bg.png'></image>
+        <view class='intro-stock-con'>
+            <view class='intro-stock-name'>
+                <view class='week-stock'>本周牛股</view>
+                <text class='name-txt'>{{stock.name}}<text class='name-num'>（{{stock.num}}）</text></text>
+            </view>
+            <view class='intro-stock-infor'>
+                <view class='infor-list'>
+                    <text class='infor-list-num'>{{stock.percentage}}</text>
+                    <view class='infor-list-txt'>t+5日涨跌幅</view>
+                </view>
+                <view class='infor-list'>
+                    <text class='infor-list-num'>{{stock.price}}</text>
+                    <view class='infor-list-txt'>发现价</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 标题 -->
+    <view class='intro-big-txt'>股票消息杂乱繁多？难以判断有价信息？</view>
+    <view class='intro-small-txt'>且看AI股市数据监测机器人如何帮您！</view>
+    <!-- 今日牛股 -->
+    <view class='intro-today-stock'>
+        <view class='today-stock-img'>
+            <image src='{{img.image1}}'></image>
+        </view>
+        <view class='today-stock-title'>
+            <image src='../../../images/intro-title.png'></image>
+            <text class='today-stock-txt'>基于大数据挖掘技术，实时获取财经热点及重大新闻，针对热点事件进行智能提炼及情感分析。</text>
+        </view>
+        <image class='today-stock-bg' src='../../../images/intro-bg1.jpg'></image>
+    </view>
+    <!-- 表格 -->
+    <view class='intro-table'>
+        <view class='intro-table-th'>
+            <text class='table-txt1'>舆情选股</text>
+            <text class='table-txt2'>查看时间</text>
+        </view>
+        <view class='intro-table-td'>
+            <text class='table-txt1'>今日牛股</text>
+            <text class='table-txt2'>每交易日8:30-9:00开盘前</text>
+        </view>
+        <view class='intro-table-td'>
+            <text class='table-txt1'>今日慎投</text>
+            <text class='table-txt2'>每交易日8:30-9:00开盘前</text>
+        </view>
+    </view>
+    <!-- 智能选股 -->
+    <view class='intro-today-stock'>
+        <view class='select-stock-title'>
+            <image src='../../../images/intro-title2.png'></image>
+            <text class='select-stock-txt'>
+        <text>全网消息即时监测，\n深度挖掘个股市场看法</text>
+            <text>结合股票数时数据，\n精准提炼个股诊断结果</text>
+            </text>
+        </view>
+        <view class='today-stock-img'>
+            <image src='{{img.image2}}'></image>
+        </view>
+    </view>
+    <!-- 立即购买 -->
+    <view class='intro-state'>
+        <text>本品非投资资讯产品，非荐股软件，全部数据基于云掌财经可搜大数据监测系统，内容仅供参考，不构成投资建议</text>
+    </view>
+</view>
+<view class='btn-buy'>
+    <button class='buy-btn'>
+        <image src='../../../images/intro-btn.png'></image>
+    </button>
+    <view class='tips-txt'>点击立即购买即表示您已同意
+        <navigator url=''>《增值服务购买协议》</navigator>
+    </view>
+</view>

@@ -1,0 +1,62 @@
+/* pages/bind-phone/bind-phone.wxss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.gray {
+  color: #999;
+}
+.bind-phone {
+  width: 100%;
+  padding: 0 4%;
+}
+.bind-phone input {
+  height: 100rpx;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 30rpx;
+  color: #333;
+}
+.bind-phone .phone-num input {
+  float: left;
+  width: 480rpx;
+}
+.bind-phone .phone-num .identify-code {
+  float: left;
+  width: 210rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0;
+  background: none;
+  border-bottom: 1px solid #e5e5e5;
+  border-radius: 0;
+  text-align: right;
+  font-size: 28rpx; 
+  color: #188bfe;
+}
+.bind-phone .phone-num .identify-code[disabled=""] {
+ color: #ccc;
+}
+.button-hover {
+  background-color: red;
+}
+.bind-phone .yzm-num input {
+  width: 100%;
+}
+.bind-phone .phone-num,.bind-phone .yzm-num {
+  margin-top:19rpx; 
+}
+.bind-phone .bind-btn {
+  height: 88rpx;
+  margin-top: 80rpx; 
+  background: #188bfe;
+  font-size: 36rpx;
+  color: #fff;
+}
+
+button[class="bind-btn"]::after,button[class="identify-code"]::after {
+  border: 0;
+  padding: 0;
+} 

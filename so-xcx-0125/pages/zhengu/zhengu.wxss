@@ -1,0 +1,433 @@
+/* pages/zhengu/zhengu.wxss */
+
+.search {
+    padding: 16rpx 20rpx;
+}
+
+.search > form {
+    position: relative;
+    display: block;
+}
+
+.search-text {
+    width: 710rpx;
+    height: 56rpx;
+    padding: 0 10px 0 75rpx;
+    background: #f8f8f8;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    color: #b2b2b2;
+}
+
+.search-text-active {
+    width: 710rpx;
+    height: 56rpx;
+    padding: 0 10px 0 75rpx;
+    border-radius: 10rpx;
+    box-shadow: 0 0 4px #ccc;
+    background: #fff;
+    font-size: 26rpx;
+    color: #b2b2b2;
+}
+
+.search-icon {
+    position: absolute;
+    top: 5rpx;
+    left: 15rpx;
+    padding: 10rpx;
+    z-index: 1;
+}
+
+.placeholder {
+    color: #b2b2b2;
+}
+
+.search-hidden {
+    position: absolute;
+    top: 56rpx;
+    left: 0;
+    width: 710rpx;
+    box-shadow: 0 0 4px #ccc;
+    z-index: 1;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.search-hidden view {
+    height: 56rpx;
+    line-height: 56rpx;
+    padding: 0 30rpx;
+    border-bottom: 1px solid #ccc;
+    background: #fff;
+    font-size: 26rpx;
+    color: #b2b2b2;
+}
+
+.search-hidden view:last-child {
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+}
+
+.stock-info {
+    padding: 0 30rpx;
+}
+
+.stock-info-tp {
+    display: flex;
+    padding: 44rpx 0 38rpx;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.area1 {
+    width: 92rpx;
+    height: 92rpx;
+    line-height: 92rpx;
+    margin: 0 30rpx 0 0;
+    border-radius: 50%;
+    font-size: 36rpx;
+    color: #fff;
+    text-align: center;
+}
+
+.area1.green-bg, .area1.red-bg, .area1.black-bg {
+    padding: 0;
+    margin-left: 0;
+}
+
+.area2 {
+    flex: 3;
+}
+
+.area2-name {
+    margin: 0 0 14rpx 0;
+    font-size: 40rpx;
+    color: #333;
+}
+
+.area2-name text {
+    font-size: 30rpx;
+    color: #666;
+}
+
+.area2-force {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.area3 {
+    flex: 2;
+    text-align: right;
+}
+
+.area3-price {
+    font-size: 52rpx;
+}
+
+.area3-range {
+    font-size: 22rpx;
+}
+
+.area3-range text {
+    padding: 0 10rpx;
+    color: #ccc;
+}
+
+.stock-info-bt {
+    display: flex;
+    align-items: center;
+    padding: 32rpx 0;
+}
+
+.stock-info-bt .stock-info-bt-txt {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.stock-info-bt .stock-info-bt-txt text {
+    color: #999;
+}
+
+.addselect {
+    width: 116rpx;
+    height: 56rpx;
+    margin-left: 60rpx;
+    line-height: 50rpx;
+    background: #f8f8f8;
+    border: 1px solid #dfdfdf;
+    border-radius: 10rpx;
+    font-size: 26rpx;
+    color: #444;
+    text-align: center;
+}
+
+.change-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32rpx;
+    line-height: 32rpx;
+    background: #f8f8f8;
+}
+
+.change-page navigator {
+    width: 32rpx;
+    height: 3rpx;
+    background: #dcdcdc;
+    margin-right: 20rpx;
+}
+
+.change-page navigator.on {
+    background: #71b7fd;
+}
+
+.zhengu-bankuai {
+    padding: 0 30rpx;
+}
+
+.com-h {
+    margin-bottom: 24rpx;
+    font-size: 36rpx;
+    color: #333;
+}
+
+.zhengu-list-con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40rpx;
+}
+
+.zhengu-list {
+    margin-bottom: 14rpx;
+    font-size: 26rpx;
+}
+
+.zhengu-list-name {
+    display: inline-block;
+    width: 185rpx;
+    margin-right: 15rpx;
+    color: #999;
+}
+
+.zhengu-list-con image {
+    width: 15rpx;
+    height: 22rpx;
+    margin-left: 10rpx;
+}
+
+.zhengu-trend {
+    padding: 30rpx 30rpx 0;
+}
+
+.zhengu-trend-tit {
+    margin: 20rpx 0;
+    font-size: 26rpx;
+    color: #333;
+    text-align: center;
+}
+
+.zhengu-trend-tit image {
+    width: 21rpx;
+    height: 21rpx;
+    margin: 0 0 0 6rpx;
+}
+
+.zhengu-trend-tit::before, .zhengu-trend-tit::after {
+    display: inline-block;
+    content: '';
+    width: 42rpx;
+    height: 2rpx;
+    background: #dfdfdf;
+}
+
+.zhengu-trend-tit::before {
+    margin: 0 16rpx 10rpx 0;
+}
+
+.zhengu-trend-tit::after {
+    margin: 0 0 10rpx 16rpx;
+}
+
+.zhengu-info {
+    padding: 40rpx 30rpx 0;
+}
+
+.zhengu-info-tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.change-date {
+    font-size: 24rpx;
+    color: #188bfe;
+}
+
+.zhengu-info-tit .com-h {
+    margin-bottom: 0;
+}
+
+.relative {
+    color: #7b7b7b;
+}
+
+.relative-info {
+    border-bottom: 1px solid #eee;
+    padding: 22rpx 0;
+}
+
+.relative-info-txt {
+    line-height: 1.6;
+    margin-bottom: 12rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.relative-info-from {
+    font-size: 24rpx;
+    color: #999;
+}
+
+.relative-news navigator:last-child {
+    border-bottom: none;
+}
+
+.zhengu-warning {
+    height: 86rpx;
+    line-height: 86rpx;
+    background: #f9f9f9;
+    font-size: 26rpx;
+    color: #ccc;
+    text-align: center;
+}
+
+.ring-canvas, .column-canvas {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.txt-canvas {
+    margin-bottom: 20rpx;
+    line-height: 1.6;
+    font-size: 22rpx;
+    color: #333;
+}
+
+.default-zhengu, .default-zixun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+
+.default-zhengu image, .default-zixun image {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+    margin: 0 auto 30rpx;
+}
+
+.default-zhengu image {
+    margin-top: -200rpx;
+}
+
+.default-zhengu text, .default-zixun text {
+    font-size: 30rpx;
+    color: #999;
+}
+
+.default-zixun {
+    padding: 90rpx 0;
+    background: #fff;
+}
+
+.k-line-data {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32rpx 30rpx 10rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.k-line-data view {
+    width: 33%;
+    margin-bottom: 20rpx;
+}
+
+.black-txt {
+    color: #666;
+}
+
+.kline-average {
+    font-size: 24rpx;
+    text-align: right;
+}
+
+.kline-average text {
+    margin-right: 40rpx;
+}
+
+.ma5 {
+    color: #6a6969;
+}
+
+.ma10 {
+    color: #f69a43;
+}
+
+.ma20 {
+    color: #edb2eb;
+}
+
+.stage, .stage-b {
+    width: 100%;
+    height: 160px;
+}
+
+.stage-b {
+    height: 80px;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.view-tab {
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+    box-shadow: 0 3rpx 8rpx #f0f0f0;
+    margin-bottom: 20rpx;
+}
+
+.view-tab view {
+    width: 50%;
+    font-size: 30rpx;
+    color: #333;
+    text-align: center;
+}
+
+.view-tab view.on text {
+    padding-bottom: 17rpx;
+    color: #188bfe;
+    border-bottom: 2px solid #188bfe;
+}

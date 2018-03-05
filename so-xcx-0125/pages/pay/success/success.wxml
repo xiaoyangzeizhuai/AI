@@ -1,0 +1,7 @@
+<!--pages/pay/success/success.wxml-->
+<view class='pay-success'>
+  <icon type="success" size="64" />
+  <text class='use-thanks'>感谢您使用AI股市数据监测机器人</text>
+  <text class='use-time'>使用期限至：2018-07-05</text>
+  <navigator class='backindex' url=''>返回首页</navigator>
+</view>

@@ -1,0 +1,144 @@
+<!--pages/zhengu/zhengu.wxml-->
+<view>
+    <!-- Begin:搜索 -->
+    <view class='search'>
+        <form>
+            <input class="{{isChecked?'search-text-active':'search-text'}}" type='text' placeholder="输入股票代码/名称，AI为您智能诊断" placeholder-class='placeholder' bindfocus='showSearch' bindblur='hiddenSearch'></input>
+            <icon class='search-icon' type='search' size='16'></icon>
+            <view class="search-hidden {{open?'display-show':'display-none'}}">
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+                <view>科大讯飞（
+                    <text class='red-txt'>00</text>0000）</view>
+            </view>
+        </form>
+    </view>
+    <!-- End:搜索 -->
+    <!-- Begin:股票信息 -->
+    <view class='stock-info'>
+        <view class='stock-info-tp'>
+            <view class='area1 green-bg'>看空</view>
+            <view class='area2'>
+                <view class='area2-name'>上峰水泥
+                    <text>(000000)</text>
+                </view>
+                <view class='area2-force'>影响力：111222</view>
+            </view>
+            <view class='area3'>
+                <view class='area3-price red-txt'>746.73</view>
+                <view class='area3-range red-txt'>+14.36
+                    <text>|</text>+0.18%</view>
+            </view>
+        </view>
+        <view class='stock-info-bt'>
+            <view class='stock-info-bt-txt'>
+                <navigator url=''>
+                    <text>驱动事件：</text>这是驱动事件标题，限制展示两行这是驱动事件标题，限制展示两行...
+                </navigator>
+            </view>
+            <view class='addselect'>+自选</view>
+        </view>
+    </view>
+    <!-- End:股票信息 -->
+    <!-- <view class='change-page'>
+        <navigator url='' open-type=''></navigator>
+        <navigator class='on' url='' open-type=''></navigator>
+    </view> -->
+    <!-- Begin:K线图 -->
+    <view class='k-line'>
+        <view class='k-line-data'>
+            <view>
+                今开：
+                <text class='red-txt'>10.25</text>
+            </view>
+            <view>
+                最高：
+                <text class='red-txt'>10.25</text>
+            </view>
+            <view>
+                成交量：
+                <text class='green-txt'>12万手</text>
+            </view>
+            <view>
+                昨收：
+                <text class='black-txt'>10.23</text>
+            </view>
+            <view>
+                最低：
+                <text class='green-txt'>10.23</text>
+            </view>
+            <view>
+                成交额：
+                <text class='black-txt'>10100亿</text>
+            </view>
+        </view>
+
+        <view class="content tab-content">
+            <!-- <view class="stock">
+                <text>股票：{{stock}} - {{code}}</text>
+                <text>时间：{{time}}</text>
+                <text>昨收：{{yc}}</text>
+            </view> -->
+            <view class="kline-average">
+                <text class="ma5">MA5:{{ma5}}</text>
+                <text class="ma10">MA10:{{ma10}}</text>
+                <text class="ma20">MA20:{{ma20}}</text>
+            </view>
+            <canvas canvas-id="k-line" class="stage">
+            </canvas>
+            <view class="kline-average">
+                <text class="ma5">MA5:{{ma5b}}</text>
+                <text class="ma10">MA10:{{ma10b}}</text>
+                <text class="ma20">MA20:{{ma20b}}</text>
+            </view>
+            <view style='position:static'>
+                <canvas canvas-id="k-line-b" class="stage-b">
+                </canvas>
+            </view>
+        </view>
+    </view>
+    <!-- End:K线图 -->
+    <!-- Begin:资讯 -->
+    <view class='zhengu-info'>
+        <view class='zhengu-info-tit'>
+            <view class='com-h'>{{datevalue}}资讯</view>
+            <view class='change-date'>
+                <picker class="calendar-day" mode="date" value="{{datevalue}}" start="1999-01-01" end="2999-12-31" bindchange="bindDateChange">
+                    更改日期
+                </picker>
+            </view>
+        </view>
+        <view class='default-zixun' wx:if="{{isHiddenn}}">
+            <image src='../../images/default-zhengu.png'></image>
+            <text>暂无相关资讯</text>
+        </view>
+        <view class='relative-news' wx:else>
+            <navigator class='relative-info'>
+                <view class='relative-info-txt' url='' open-type=''>
+                    这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+                </view>
+                <view class='relative-info-from'>2018-10-17</view>
+            </navigator>
+            <navigator class='relative-info'>
+                <view class='relative-info-txt' url='' open-type=''>
+                    这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+                </view>
+                <view class='relative-info-from'>2018-10-17</view>
+            </navigator>
+            <navigator class='relative-info'>
+                <view class='relative-info-txt' url='' open-type=''>
+                    这是一段资讯的标题，与可搜普通新闻类资讯一致，没有摘要讯一致--云掌财经
+                </view>
+                <view class='relative-info-from'>2018-10-17</view>
+            </navigator>
+        </view>
+    </view>
+    <!-- End:资讯 -->
+    <view class='zhengu-warning'>以上内容不构成投资建议，股市有风险，投资需谨慎</view>
+</view>

@@ -1,0 +1,224 @@
+/* pages/niugu/niugu.wxss */
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+.red {
+  color: #ff4c56;
+}
+.green {
+  color: #21ac59;
+}
+.banner {
+  position: relative;
+  height: 300rpx;
+}
+
+.banner image {
+  display: block;
+  width: 100%;
+  height: 300rpx;
+}
+
+.banner text {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #fff;
+  display: -webkit-box; /* OLD: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box; /* OLD: Firefox (buggy) */
+  display: -ms-flexbox; /* MID: IE 10 */
+  display: -webkit-flex; /* NEW, Chrome 21–28, Safari 6.1+ */
+  display: flex; /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+  -webkit-box-align: center;
+  -moz-box-align: center; /* OLD… */
+  -ms-flex-align: center; /* You know the drill now… */
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  padding: 0 4%;
+}
+
+.tr.bg-gray {
+  background: #f8f8f8;
+}
+.tr-border {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.th {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.th.w1, .td.w1 {
+  width: 150%;
+  align-items: left;
+}
+
+.td {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 130rpx;
+  border-bottom: 1px solid #e5e5e5;
+  font-size: 30rpx;
+  color: #666;
+}
+.price.red {
+  color: #ff4c4c;
+}
+.price.green {
+  color: #21ac59;
+}
+.stock-name {
+  white-space: nowrap;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.stock-code {
+  margin-top: 10rpx;
+  font-size: 22rpx;
+  color: #999;
+}
+
+.btn-zg {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn-zg image {
+  width: 100%;
+  height: 100%;
+}
+
+.opr-open image {
+  width: 26rpx;
+  height: 27rpx;
+}
+
+.article {
+  padding: 20rpx 50rpx;
+  background: #fafafa;
+  line-height: 2;
+  font-size: 24rpx;
+}
+
+.article .h6 {
+  color: #333;
+}
+
+.article .p {
+  margin-left: 20rpx;
+  color: #999;
+}
+.btn-blue {
+  width: 260rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  margin: 140rpx auto;
+  background: #188bfe;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #fff;
+}
+/* 昨日数据 */
+.old-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 74rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  margin-bottom: 2px;
+  background: #f8f8f8;
+  font-size: 28rpx;
+  color: #999;
+}
+.old-title > text {
+  width: 100%;
+}
+.old-title > text:nth-of-type(2) {
+  text-align: right;
+}
+.old-title .opr-open {
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  height: 100%;
+}
+.price {
+  color: #333;
+}
+.tag-data {
+  width: 170rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  font-size: 32rpx;
+  color: #fff;
+}
+.footer {
+  height: 84rpx;
+  line-height: 84rpx;
+  background: #f9f9f9;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.history-data{
+    padding: 50rpx 30rpx 20rpx;
+    font-size: 34rpx;
+    color: #333;
+}
+.default-niugu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-left: -252rpx;
+    z-index: 2;
+
+}
+.default-niugu image{
+    display: block;
+    width: 85rpx;
+    height: 100rpx;
+    margin: 0 auto 30rpx;
+}
+.default-niugu text{
+    display: block;
+    font-size: 28rpx;
+    color: #666;
+}
+.today-txt {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-left: -172rpx;
+  font-size: 22rpx;
+  color: #666;
+}

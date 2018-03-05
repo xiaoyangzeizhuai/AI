@@ -1,0 +1,57 @@
+{
+    "pages": [
+        "pages/zhengu/zhengu",
+        "pages/agreement/agreement",
+        "pages/sevenday-article/sevenday-article",
+        "pages/index/index",        
+        "pages/pay/intro/intro",        
+        "pages/my-gu/add/add",
+        "pages/niugu/niugu",
+        "pages/my-gu/my-gu",
+        "pages/complaint/complaint",
+        "pages/sevenday-article/my/my",
+        "pages/hot-subject/hot-subject",
+        "pages/hot-article/hot-article",
+        "pages/hot-article/intro/intro",
+        "pages/hot-subject/intro/intro",
+        "pages/pay/pay",
+        "pages/zhengu/kline/kline",
+        "pages/article-info/article-info",
+        "pages/pay/success/success",
+        "pages/bind-phone/bind-phone",
+        "pages/shengu/shengu",
+        "pages/my/my",
+        "pages/logs/logs"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#188bfe",
+        "navigationBarTitleText": "AI诊股工具",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#7f8389",
+        "selectedColor": "#306dc1",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "images/index.png",
+                "selectedIconPath": "images/index-active.png"
+            },
+            {
+                "pagePath": "pages/sevenday-article/sevenday-article",
+                "text": "消息",
+                "iconPath": "images/news.png",
+                "selectedIconPath": "images/news-active.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "images/my.png",
+                "selectedIconPath": "images/my-active.png"
+            }
+        ]
+    }
+}

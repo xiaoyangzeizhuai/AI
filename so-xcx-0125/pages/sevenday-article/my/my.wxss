@@ -1,0 +1,221 @@
+/* pages/sevenday-article/my/my.wxss */
+.default {
+    display: flex;
+    flex-direction: column;
+}
+
+.default-img {
+    display: block;
+    width: 145rpx;
+    height: 140rpx;
+    margin: 188rpx auto 20rpx;
+}
+
+.default-txt {
+    margin: 0 0 105rpx 0;
+    font-size: 30rpx;
+    color: #999;
+    text-align: center;
+}
+
+.default-btn {
+    margin: 0 auto;
+    width: 220rpx;
+    height: 66rpx;
+    line-height: 66rpx;
+    background: #188bfe;
+    border-radius: 10rpx;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+}
+
+.white-bg {
+    position: relative;
+    height: 100%;
+    background: #fff;
+}
+
+.sevenday-url {
+    line-height: 1.6;
+    font-size: 30rpx;
+    color: #188bfe;
+}
+
+.select-news {
+    position: absolute;
+    right: 30rpx;
+    top: 0;
+    height: 75rpx;
+    line-height: 75rpx;
+    font-size: 28rpx;
+    color: #666;
+}
+
+.arrow-down {
+    width: 16rpx;
+    height: 8rpx;
+    margin: 0 0 5rpx 10rpx;
+}
+
+.add-stock {
+    position: fixed;
+    bottom: 50rpx;
+    right: 0;
+    width: 100rpx;
+    height: 100rpx;
+    z-index: 10; 
+}
+
+.add-stock image {
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.view-tab {
+    display: flex;
+    display: -webkit-flex;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff;
+}
+
+.view-tab view {
+    width: 50%;
+    font-size: 30rpx;
+    color: #333;
+    text-align: center;
+}
+
+.view-tab view.on text {
+    padding-bottom: 17rpx;
+    color: #188bfe;
+    border-bottom: 2px solid #188bfe;
+}
+
+.day {
+    height: 75rpx;
+    line-height: 75rpx;
+    padding: 0 30rpx;
+    background: #f4f4f4;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.sevenday-news {
+    padding-bottom: 50rpx;
+    background: #fff;
+}
+
+.sevenday-news-con {
+    margin-top: 40rpx;
+}
+
+.sevenday-news-con .sevenday:first-child .sevenday-rt {
+    padding-top: 0;
+}
+
+.sevenday-news-con .sevenday:first-child .sevenday-lt {
+    padding-top: 2rpx;
+}
+
+.sevenday {
+    /* display: flex; */
+    padding: 0 30rpx;
+}
+
+.sevenday-lt {
+    float: left;
+    position: relative;
+    width: 96rpx;
+    padding: 52rpx 20rpx 0 0;
+    font-size: 28rpx;
+    color: #999;
+}
+
+.sevenday-lt::after {
+    position: absolute;
+    display: inline-block;
+    right: -10rpx;
+    top: 60rpx;
+    content: '';
+    width: 18rpx;
+    height: 18rpx;
+    border: 1px solid #cbd1d4;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.sevenday-news-con .sevenday:first-child .sevenday-lt::after {
+    top: 10rpx;
+}
+
+.news-info {
+    margin: 0 0 15rpx 0;
+    line-height: 1.5;
+    font-size: 24rpx;
+    color: #999;
+}
+
+.hot-news-con {
+    margin: 0 0 10rpx 0;
+}
+
+.sevenday-rt {
+    float: left;
+    width: 593rpx;
+    padding: 48rpx 0 0 28rpx;
+    border-left: 1px solid #cbd1d4;
+}
+
+.loading-more {
+    background: #fff;
+    padding-bottom: 30rpx;
+}
+
+.loading-more-txt {
+    display: block;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 0 30rpx;
+    background: #fff;
+    font-size: 26rpx;
+    color: #999;
+    text-align: center;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+page {
+    background: #f4f4f4;
+    height: 100%;
+}
+.totop1{
+    position: fixed;
+    right: 0;
+    bottom: 150rpx;
+    width: 100rpx;
+    height: 100rpx;
+    z-index: 2;
+}
+.totop1 image{
+    display: block;
+    width: 100rpx;
+    height: 100rpx;
+}

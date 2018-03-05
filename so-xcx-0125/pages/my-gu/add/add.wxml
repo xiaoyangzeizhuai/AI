@@ -1,0 +1,18 @@
+<!--搜索框-->
+<view class='search-bar'>
+  <image src='../../../images/icon-glass.png'></image>
+  <input type='text' placeholder="输入股票代码/名称，添加自选股" placeholder-class="label-text" focus/>
+  <view class='search-bar-back'>取消</view>
+</view>
+<block wx:for="{{zxgData}}" wx:key="this" wx:for-item="item">
+  <view class="result">
+    <view class='stock'>
+      <text class='stock-name'>{{item.name}}</text>
+      <text class='stock-code'>({{item.code}})</text>
+    </view>
+    <view class="add-wrap" >
+      <image src='../../../images/icon-add.png' bindtap='addStock' wx:if="{{item.selected}}"></image>
+      <text wx:if="{{!item.selected}}">已添加</text>
+    </view>
+  </view>
+</block>
